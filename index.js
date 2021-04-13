@@ -8,9 +8,9 @@ function Livre(numEnreg, titre, auteur, nbrPages) {
   this.nbrPages = nbrPages;
   if (nbrPages < 100) {
     console.log("Nombre de page entre 0 et 100");
-  } else if (nbrPages < 200) {
+  } else if (nbrPages > 101 && nbrPages < 200) {
     console.log("Nombre de page entre 101 et 200");
-  } else if (nbrPages < 300) {
+  } else if (nbrPages > 200 && nbrPages < 300) {
     console.log("Nombre de page entre 200 et 300");
   } else if (nbrPages > 301) {
     console.log("Nombre de page supérieur à 301");
@@ -31,5 +31,5 @@ function Dictionnaire(numEnreg, titre, langue) {
 Livre.prototype = Object.create(Document.prototype);
 Revue.prototype = Object.create(Document.prototype);
 Dictionnaire.prototype = Object.create(Document.prototype);
-let livre = new Livre(100, "Bob", "Max", 250);
+let livre = new Livre(100, "Bob", "Max", 150);
 console.log(livre);
