@@ -33,3 +33,16 @@ Revue.prototype = Object.create(Document.prototype);
 Dictionnaire.prototype = Object.create(Document.prototype);
 let livre = new Livre(100, "Bob", "Max", 150);
 console.log(livre);
+
+// Change random Color
+
+const texte = document.querySelector("p span");
+texte.style.color = "#FF0000";
+
+function ajoute() {
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  texte.style.color = "#" + randomColor;
+}
+function supprime() {
+  texte.style.color = "#FF0000";
+}
